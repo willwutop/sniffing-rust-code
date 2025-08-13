@@ -6,5 +6,17 @@ edition = "2024"
 [features]
 default = []
 dst-deep-dive = []
+error-handling-patterns = ["dep:thiserror", "dep:serde_json", "dep:anyhow", "dep:sqlx",
+    "dep:reqwest", "dep:axum", "dep:http", "dep:redis", "dep:tokio", "dep:rand"]
 
 [dependencies]
+thiserror = { version = "2.0.12", optional = true }
+serde_json = { version = "1.0.140", optional = true }
+anyhow = { version = "1.0.98", optional = true }
+sqlx = { version = "0.8.6", optional = true }
+reqwest = { version = "0.12.20", optional = true }
+axum = { version = "0.8.4", optional = true }
+http = { version = "1.3.1", optional = true }
+redis = { version = "0.32.2", optional = true }
+tokio = { version = "1.47.1", optional = true }
+rand = { version = "0.8.5", optional = true }
