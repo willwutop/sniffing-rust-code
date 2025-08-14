@@ -8,6 +8,7 @@ default = []
 dst-deep-dive = []
 error-handling-patterns = ["dep:thiserror", "dep:serde_json", "dep:anyhow", "dep:sqlx",
     "dep:reqwest", "dep:axum", "dep:http", "dep:redis", "dep:tokio", "dep:rand"]
+iterator-patterns = []
 
 [dependencies]
 thiserror = { version = "2.0.12", optional = true }

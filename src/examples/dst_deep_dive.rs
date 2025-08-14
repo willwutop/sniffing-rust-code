@@ -8,7 +8,7 @@ fn bad_dst_code() {
 }
 
 #[test]
-// cargo test -F dst-deep-dive -- test_fat_pointer_size --nocapture
+// cargo test --lib -F dst-deep-dive -- test_fat_pointer_size --nocapture
 fn test_fat_pointer_size() {
     // 数组切片 - 胖指针
     let arr = [1, 2, 3, 4, 5];
@@ -75,7 +75,7 @@ mod smart_ptr {
     }
 
     #[test]
-    // cargo test -F dst-deep-dive -- test_process_data --nocapture
+    // cargo test --lib -F dst-deep-dive -- test_process_data --nocapture
     fn test_process_data() {
         assert_eq!(process_data("123").unwrap(), 123);
         assert!(process_data("no a num").is_err());
@@ -155,7 +155,7 @@ mod smart_ptr {
     }
 
     #[test]
-    // cargo test -F dst-deep-dive -- test_debug_box --nocapture
+    // cargo test --lib -F dst-deep-dive -- test_debug_box --nocapture
     fn test_debug_box() {
         let debug_str = DebugBox::new("Hello, Rust!".to_string());
 
@@ -267,7 +267,7 @@ mod dyn_processor {
     }
 
     #[test]
-    // cargo test -F dst-deep-dive -- test_plugin_system --nocapture
+    // cargo test --lib -F dst-deep-dive -- test_plugin_system --nocapture
     fn test_plugin_system() {
         let mut manager = PluginManager::new();
 
